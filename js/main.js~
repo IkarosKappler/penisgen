@@ -1,0 +1,26 @@
+/**
+ * Adapted from
+ *   loader.js and the main script by Pomax/bezierjs
+ *   https://github.com/Pomax/bezierjs
+ *
+ * @modified 2016-09-03 Ikaros Kappler (removed the require() calls and added underscore.js compatibility)
+ **/
+
+(function(drawFunctions) {
+	       with(drawFunctions) {
+	         with(Math) {
+	         var curve = new Bezier(102, 33, 16, 99, 101, 129, 132, 173 );
+                 var draw = function() {
+                 drawSkeleton(curve);
+                 drawCurve(curve);
+                 setColor("red");
+                 var doc = function(c, idx) { drawCurve(c); };
+                 var outline = curve.outline(5,5,25,25);
+                 outline.curves.forEach(doc);
+                 }
+	         draw();
+	         handleInteraction( getCanvas(), curve).onupdate = function(evt) { reset(); draw(evt); };
+	         }
+	       }
+	    } (bindDrawFunctions(0)) );
+	    
