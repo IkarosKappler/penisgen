@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Document Title</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="description" content="Content Description" />
+    <meta name="keywords" content="any, keywords, you, want" />
+    <meta name="author" content="Ikaros Kappler" />
+    <meta name="date" content="2015-04-22" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+
+    <script src="lib/bezier/bezier.js"></script>
+    <script src="lib/bezier/poly-bezier.js"></script>
+    <script src="lib/bezier/draw.js"></script>
+    <script src="lib/bezier/interaction.js"></script>
+    <script src="lib/bezier/loader.js"></script>
+    <script src="lib/bezier/utils.js"></script>
+  </head>
+  <body>
+
+    <header>
+      <h1>Bezier.js, for doing Bezier curve things</h1>
+    </header>
+    
+    <main>
+
+      <section id="constructor">
+        <h2>graduated outlines, using .outline(d1,d2,d3,d4)</h2>
+
+        <figures>
+          <figure class="cubic"><script type="text/beziercode">
+            new Bezier(102, 33, 16, 99, 101, 129, 132, 173 );
+            var draw = function() {
+              drawSkeleton(curve);
+              drawCurve(curve);
+              setColor("red");
+            var doc = function(c, idx) { drawCurve(c); };
+            var outline = curve.outline(5,5,25,25);
+            outline.curves.forEach(doc);
+            }
+          </script></figure>
+        </figures>
+
+
+
+      </section>
+    </main>
+  </body>
+</html>
