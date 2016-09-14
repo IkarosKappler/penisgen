@@ -26,7 +26,7 @@ $( document ).ready( function() {
                     drawCurve(shaftCurve);
 
 		    drawSkeleton(glansCurve);
-		    drawCurve(glansCurve);
+		    //drawCurve(glansCurve);
 
                     setColor("red");
 
